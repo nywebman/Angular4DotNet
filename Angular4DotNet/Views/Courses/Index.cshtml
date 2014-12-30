@@ -2,11 +2,7 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container" ng-init="courses = [
-    {number:'CREA101',name:'care of Creatures',instructor:'r hagrid'},
-    {number:'DARK502',name:'defence of dark arts',instructor:'Snape'},
-    {number:'TRAN201',name:'Transfiguration',instructor:'Mcconagal'}
-    ]">
+<div class="container" ng-init="courses = @Html.Raw(Model)">
     <div class="row">
         <div class="span10">
             <table class="table table-condensed table-hover">
