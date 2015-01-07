@@ -26,7 +26,8 @@ namespace Angular4DotNet.Models.Registration
                 new CourseVm {Number = "TRAN201", Name = "Transfiguration", Instructor = "Mcconagal"}
             };
             var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
-            return JsonConvert.SerializeObject(courses, Formatting.None, settings);
+            var serializeCourses = JsonConvert.SerializeObject(courses, Formatting.None, settings);
+            return serializeCourses;
         }
         public string GetSerializedInstructors()
         {
@@ -37,7 +38,8 @@ namespace Angular4DotNet.Models.Registration
                 new InstructorVm {Name = "M McGonagal",Email = "mcconagal@hogwarts.com",RoomNumber = 102}
             };
             var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
-            return JsonConvert.SerializeObject(instructors, Formatting.None, settings);
+            var serializedInstructors = JsonConvert.SerializeObject(instructors, Formatting.None, settings);
+            return serializedInstructors;
         }
     }
 }
